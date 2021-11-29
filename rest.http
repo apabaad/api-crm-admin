@@ -1,0 +1,15 @@
+# user apis
+
+### get Admin user
+
+GET http://localhost:8000/api/v1/admin-user
+
+
+### create admin user
+
+POST http://localhost:8000/api/v1/admin-user
+
+Content-Type: application/application/json
+{
+    "fname" :"Rupesh"
+}

@@ -20,8 +20,24 @@ app.use(express.urlencoded({ extended: true })); //to submit the form data other
 import mongoClient from './src/config/db.js';
 mongoClient();
 
+// load routers
+import adminRouter from './src/routers/admin.router.js';
+
+// use routers
+app.use('/api/v1/admin-user', adminRouter);
+
 app.use('/', (req, res, next) => {
   res.send('ok');
+});
+
+// global error handler
+app.use((error, req, res, next) => {
+  console.log(error);
+  res.status(error.status || 500);
+  res.json({
+    status: 'error',
+    message: error.message,
+  });
 });
 
 app.listen(PORT, (error) => {
