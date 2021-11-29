@@ -25,6 +25,11 @@ const AdminUserSchema = new Schema(
       indexes: 1,
       unique: true,
     },
+    isEmailConfirmed: {
+      type: Boolean,
+      required: true,
+      default: false,
+    },
     phone: {
       type: String,
       //   required: true,

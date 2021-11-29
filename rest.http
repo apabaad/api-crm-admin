@@ -8,8 +8,12 @@ GET http://localhost:8000/api/v1/admin-user
 ### create admin user
 
 POST http://localhost:8000/api/v1/admin-user
+Content-Type: application/json
 
-Content-Type: application/application/json
 {
-    "fname" :"Rupesh"
+    "fName" :"Rupesh",
+    "lName" :"Adhikari",
+    "email":"a@abc.com",
+    "password": "1234567",
+    "phone": "123456"
 }

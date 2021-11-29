@@ -1,4 +1,5 @@
 import express from 'express';
+import { newAdminUserFormValidation } from '../middlewares/formValidation.middleware.js';
 
 const Router = express.Router();
 
@@ -8,7 +9,7 @@ Router.get('/', (req, res) => {
 });
 
 // create an admin user
-Router.post('/', (req, res, next) => {
+Router.post('/', newAdminUserFormValidation, (req, res, next) => {
   try {
     res.json({
       status: 'success',
