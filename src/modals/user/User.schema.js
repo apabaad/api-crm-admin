@@ -52,4 +52,4 @@ const AdminUserSchema = new Schema(
   }
 );
 
-export default Schema.model('Admin_user', AdminUserSchema);
+export default mongoose.model('admin_user', AdminUserSchema);
