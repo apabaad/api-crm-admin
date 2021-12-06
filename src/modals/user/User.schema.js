@@ -46,6 +46,15 @@ const AdminUserSchema = new Schema(
       maxLength: 30,
       default: 'developer', //admin, developer, user, customerService
     },
+    refreshJWT: {
+      addedAt: {
+        type: Date,
+      },
+      token: {
+        type: String,
+        maxLength: 500,
+      },
+    },
   },
   {
     timestamps: true,
